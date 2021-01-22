@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Rubik;
+  font-size: 16px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  grid-area: attribution;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  width: 100%;
+  max-width: 1440px;
+  height: 100vh;
+  position: relative;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container2 {
+  display: grid;
+  grid-template-areas:
+    "chat booking"
+    "attribution attribution";
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  width: 900px;
+  align-items: center;
+}
+/* background shapes */
+.bg {
+  width: 550px;
+  height: 750px;
+  background-image: linear-gradient(
+    to top,
+    hsl(264, 100%, 61%),
+    hsl(293, 100%, 63%)
+  );
+  border-radius: 0 0 300px 300px;
+  position: absolute;
+  left: -200px;
+  top: 0px;
+  z-index: -1;
+}
+.bg1 {
+  width: 550px;
+  height: 750px;
+  background-color: #f7f5fa;
+  border-radius: 300px 300px 0 0;
+  position: absolute;
+  right: -200px;
+  bottom: 0px;
+  z-index: -1;
+}
+/* background shapes */
+
+/* Chat app */
+.chat-app {
+  width: 100%;
+  max-width: 300px;
+  min-width: 300px;
+  background-color: #f5f3f8;
+  border: solid white 10px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.248) 5px 5px 50px;
+  grid-area: chat;
+}
+/* top */
+.chat-app .top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 30px 20px 20px 20px;
+  border-radius: 25px 25px 10px 10px;
+  background-image: linear-gradient(
+    to right,
+    hsl(264, 100%, 61%),
+    hsl(293, 100%, 63%)
+  );
+  position: relative;
+}
+.top::after {
+  content: "";
+  width: 150px;
+  height: 30px;
+  border-radius: 20px 20px 30px 30px;
+  background-color: white;
+  position: absolute;
+  top: -10px;
+  left: 25%;
+}
+.chat-app .top img {
+  width: 25px;
+  border-radius: 50%;
+  border: solid white 2px;
+}
+.chat-app .top a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+.chat-app .top h1 {
+  color: white;
+  font-size: 15px;
+  font-weight: lighter;
+}
+.chat-app .top p {
+  color: rgba(225, 225, 225, 0.583);
+  font-size: 10px;
+}
+/* top */
+
+/* chat */
+.chat {
+  padding: 0 5px 10px 5px;
+}
+.recieved {
+  font-size: 10px;
+  color: hsl(276, 55%, 52%);
+  background-color: #ede5f4;
+  padding: 10px;
+  width: 150px;
+  border-radius: 10px;
+  margin: 5px;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.send-img {
+  padding: 5px;
+  width: 150px;
+  border-radius: 10px;
+}
+.send-img img {
+  width: 40px;
+  border-radius: 10px;
+}
+.send {
+  padding: 10px;
+  width: 150px;
+  border-radius: 10px;
+  margin: 5px;
+  font-size: 10px;
+  background-color: white;
+  color: hsl(271, 15%, 43%);
+}
+.recieved-offer {
+  padding: 10px;
+  width: 150px;
+  border-radius: 10px;
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  background-image: linear-gradient(
+    to left,
+    hsl(264, 100%, 61%),
+    hsl(293, 100%, 63%)
+  );
+  color: white;
+}
+.recieved-offer p {
+  font-size: 10px;
+}
+.recieved-offer h1 {
+  font-size: 12px;
+}
+.type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+.type input {
+  border: transparent;
+  width: 100%;
+  font-size: 10px;
+  color: hsl(206, 6%, 79%);
+}
+.type a {
+  color: white;
+  background-color: hsl(271, 36%, 24%);
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 50%;
+}
+/* chat */
+/* Chat app */
+
+/* simple booking portion */
+.booking {
+  grid-area: booking;
+}
+.booking h1 {
+  color: hsl(271, 36%, 24%);
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+.booking p {
+  color: hsl(270, 7%, 64%);
+}
+/* simple booking portion */
+
+/* responsive */
+@media only screen and (max-width: 720px) {
+  .container2 {
+    grid-template-areas:
+      "chat"
+      "booking"
+      "attribution";
+    grid-template-columns: 1fr;
+  }
+  .chat-app {
+    margin-top: 150px;
+  }
+  .bg {
+    left: -350px;
+    top: -300px;
+  }
+  .bg1 {
+    right: -350px;
+    bottom: -300px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .container2 {
+    grid-template-areas:
+      "chat"
+      "booking"
+      "attribution";
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .chat-app {
+    margin-top: 150px;
+    max-width: 270px;
+    min-width: 270px;
+  }
+  .bg {
+    left: -350px;
+    top: -300px;
+  }
+  .bg1 {
+    right: -350px;
+    bottom: -300px;
+  }
+}
+/* responsive */
